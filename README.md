@@ -28,6 +28,8 @@ create a 'Spinner' widget
   description: "Faites tourner la roue pour tenter d'obtenir d'innombrables cadeaux",
   descriptionColor: Color(0xFFA7A7A7),
   gifts: ["Gift 1", "Gift 2", "Gift 3", ...],
+  imagePath: "assets/images/roulette.png",
+  iconPath: "assets/images/roulette-icon.png",
 )
 ```
 
@@ -63,6 +65,8 @@ class MyApp extends StatelessWidget {
           description: "Spin the wheel to try to get countless gifts",
           descriptionColor: Color(0xFFA7A7A7),
           gifts: ["iPhone", "Free Coffee", "T-shirt", "Discount Coupon"],
+          imagePath: "assets/images/roulette.png",
+          iconPath: "assets/images/roulette-icon.png",
         ),
       ),
     ));
@@ -73,7 +77,7 @@ class MyApp extends StatelessWidget {
 
 ## Screenshots
 
-<img src="Roulette.jpg" width="300" height="600">
+<img src="https://github.com/ET-TOUNANI/spinning-wheel/blob/main/Roulette.jpg" width="300" height="600">
 
 ## Future Features
 

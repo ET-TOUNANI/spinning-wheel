@@ -9,6 +9,8 @@ class Spinner extends StatefulWidget {
   final String? description;
   final Color? descriptionColor;
   final List<String> gifts;
+  final String pathImage;
+  final String iconPath;
 
   const Spinner({
     Key? key,
@@ -17,6 +19,8 @@ class Spinner extends StatefulWidget {
     this.description,
     this.descriptionColor,
     required this.gifts,
+    required this.pathImage,
+    required this.iconPath,
   }) : super(key: key);
 
   @override
@@ -48,6 +52,9 @@ class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               // TODO: add the title
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.2,
+              ),
               Expanded(
                 child: Container(
                   decoration: const BoxDecoration(
@@ -96,9 +103,9 @@ class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
             right: 0,
             height: MediaQuery.of(context).size.height * 0.8,
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/Spinner.png"),
+                  image: AssetImage(widget.pathImage),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -108,6 +115,7 @@ class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
                 pieces: 10,
                 speed: 500, //defuaft is 500
                 isShowTextTest: true,
+                pathImage: widget.pathImage,
                 // offset: 119 / 10, //random 1/10 pieces defuaft is zero
               ),
             ),
@@ -117,7 +125,7 @@ class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
             left: 0,
             right: 0,
             child: Image.asset(
-              "assets/icons/tin.png",
+              widget.iconPath,
               height: MediaQuery.of(context).size.height * 0.08,
             ),
           ),
@@ -137,8 +145,8 @@ class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  title: const Text("Vous avez gagné !"),
-                  content: Text("Vous avez gagné un $_selectedGift"),
+                  title: const Text("You won !"),
+                  content: Text("You won a $_selectedGift"),
                   actions: [
                     TextButton(
                       onPressed: () {
@@ -155,7 +163,7 @@ class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 30.0),
           child: Text(
-            "Commencer !",
+            "Start !",
             style: TextStyle(
               color: Colors.white.withOpacity(0.8),
               fontSize: 24,

@@ -16,6 +16,8 @@ class WheelSpin extends StatefulWidget {
   final bool isShowTextTest;
   final int speed;
   final Color textColor;
+  final String pathImage;
+
   const WheelSpin(
       {Key? key,
       required this.controller,
@@ -23,6 +25,7 @@ class WheelSpin extends StatefulWidget {
       this.offset = 0,
       required this.pieces,
       this.isShowTextTest = false,
+      required this.pathImage,
       this.speed = 300,
       this.textColor = Colors.white})
       : super(key: key);
@@ -226,9 +229,9 @@ class _WheelSpinState extends State<WheelSpin> with TickerProviderStateMixin {
           angle: angle,
           child: Container(
               decoration: (isNhanKetQua)
-                  ? const BoxDecoration(
+                  ? BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/images/Roulette.png"),
+                        image: AssetImage(widget.pathImage),
                         fit: BoxFit.fitHeight,
                         opacity: 0.4,
                       ),

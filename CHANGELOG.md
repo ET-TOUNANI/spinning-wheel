@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.0.2
 
-- Spinner wheel for iOS and Android with customizable color, text, text size, text color, text font, background color, and spinner size.
+- Fixing assets bugs in pubspec.yaml

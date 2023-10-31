@@ -1,6 +1,6 @@
 name: spinner_wheel
-description: A new Flutter package project.
-version: 0.0.1
+description: A spinner wheel package project.
+version: 0.0.2
 homepage: https://github.com/ET-TOUNANI/spinning-wheel
 
 environment:
@@ -22,9 +22,7 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   # To add assets to your package, add an assets section, like this:
-  assets:
-    - assets/icons/
-    - assets/images/
+  # assets:
   #
   # For details regarding assets in packages, see
   # https://flutter.dev/assets-and-images/#from-packages
